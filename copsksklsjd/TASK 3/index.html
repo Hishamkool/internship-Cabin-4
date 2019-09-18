@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <link rel="stylesheet" href="css/style.css">
         <title>
           Dice Game  
@@ -16,7 +15,7 @@
             <img src="images/Red-Dice-PNG-Transparent-File.png" alt="Dice" height="130">        
         </div>
         
-        <div id="boxone" class="boxone">
+        <div class="boxone">
             <div class="input">
                    <b>
                        PLAYER 1
@@ -45,7 +44,7 @@
             <img src="images/vs.png" alt="VS" height="70">
         </div>
 
-        <div id="boxtwo" class="boxtwo">
+        <div class="boxtwo">
             <div class="input">
                 <b>
                     PLAYER 2
@@ -66,20 +65,18 @@
                 </div>
             </div>
             <div class="rollon">
-                <button class="button">Roll On</button>    
+                <button type="button" class="button">Roll On </button>    
             </div>
         </div>
         
         <div class="buttons">
           
 
-            <!-- <button type="button" id="start" class="start" onclick="GameStart()">Start </button> -->
-            <input type="button" class="start" value="START" id="start" onclick="GameStart()"></input> 
-
-            <!-- <button type="button" class="hold">Hold </button> -->
-            <input type="button" class="hold" value="HOLD" id="hold" onclick="hold()"></input> 
+            <button type="button" class="start" >Start </button>
+            <button type="button" class="hold">Hold </button>
+ 
            
         </div>
-        <script src="js/java.js"></script>
+
     </body>
 </html>
