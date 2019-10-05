@@ -1,6 +1,7 @@
 let running =false;
 let activeplayer=0;
-let cs=[];
+var sum=0;
+let cs=[activeplayer];
 let ts=[];
 const limit=20;
 var flag=0;
@@ -10,11 +11,20 @@ function GameStart(){
     
     if(!running){
         flag=1;
+
         
         // alert("Game has started");
         start.style.background = 'red ';
         start.value="STOP";
-        document.getElementById("boxone").style.boxShadow="0px 0px  30px 15px lightgreen";
+            if(activeplayer==0){
+                document.getElementById("boxone").style.boxShadow="0px 0px  30px 15px lightgreen";
+                document.getElementById("boxtwo").style.boxShadow="";
+            }
+            if(activeplayer==1){
+                document.getElementById("boxone").style.boxShadow="";
+                document.getElementById("boxtwo").style.boxShadow="0px 0px  30px 15px lightgreen";
+            }
+            
         running=true;
     }
     else if(running){
@@ -39,8 +49,13 @@ function rollOne(){
         
         // document.getElementById("boxone").style.boxShadow="0px 0px  30px 15px lightgreen";
         if(no==1){
-        document.getElementById("Face").src="images/1.png";
-        document.getElementById("Face")
+            document.getElementById("Face").src="images/1.png";
+            sum=0;
+            cs[activeplayer]=sum;
+            document.getElementById("scoreone").innerHTML = cs;
+            activeplayer=1;
+            document.getElementById("boxone").style.boxShadow="";
+            document.getElementById("boxtwo").style.boxShadow="0px 0px  30px 15px lightgreen";
         }
         if(no==2){
             document.getElementById("Face").src="images/2.png";
@@ -57,7 +72,18 @@ function rollOne(){
         if(no==6){
             document.getElementById("Face").src="images/6.png";
         }
-       
+    
+        if(no!=1 && activeplayer==0)
+        {
+        cs[activeplayer]=cs[activeplayer]+no;
+        document.getElementById("scoreone").innerHTML = cs;
+            } 
+        if(no!=1 && activeplayer==1)
+        {
+        cs[activeplayer]=cs[activeplayer]+no;
+        document.getElementById("scoretwo").innerHTML = cs;
+            } 
+        
 
     }
     

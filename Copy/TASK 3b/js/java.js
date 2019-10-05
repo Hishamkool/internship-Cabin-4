@@ -40,7 +40,6 @@ function rollOne(){
         // document.getElementById("boxone").style.boxShadow="0px 0px  30px 15px lightgreen";
         if(no==1){
         document.getElementById("Face").src="images/1.png";
-        document.getElementById("Face")
         }
         if(no==2){
             document.getElementById("Face").src="images/2.png";
